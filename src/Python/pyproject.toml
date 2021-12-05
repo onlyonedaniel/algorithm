@@ -3,6 +3,7 @@ name = "algorithm"
 version = "0.1.0"
 description = ""
 authors = ["onlyonedaniel <“1324013589@qq.com”>"]
+virtualenvs.create = false
 
 [[tool.poetry.source]]
 name = "aliyun"
