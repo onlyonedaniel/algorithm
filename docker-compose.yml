@@ -1,0 +1,6 @@
+backend:
+    build: .
+    tty: true
+    volumes: 
+        - ./:/var/www/
+    
