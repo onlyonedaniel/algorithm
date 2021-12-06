@@ -1,1 +1,1 @@
-__all__ = ['algorithm']
+__all__ = ["algorithm"]
