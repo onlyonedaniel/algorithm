@@ -1,6 +1,6 @@
 # import sys
 
-from ..algorithm import leetcode_704_bineray_search, leetcode_278_find_first_bad_version
+from ..algorithm import leetcode_278_find_first_bad_version, leetcode_704_bineray_search
 
 
 def test_binary_search():
