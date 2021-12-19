@@ -1,6 +1,10 @@
 # import sys
 
-from ..algorithm import leetcode_278_find_first_bad_version, leetcode_704_bineray_search
+from ..algorithm import (
+    leetcode_35_insert_position,
+    leetcode_278_find_first_bad_version,
+    leetcode_704_bineray_search,
+)
 
 
 def test_binary_search():
@@ -14,3 +18,10 @@ def test_bad_version():
     n = 100
     result = leetcode_278_find_first_bad_version.Solution().firstBadVersion(n)
     assert result == 40
+
+
+def test_search_insert():
+    nums = [1, 3, 5, 6]
+    target = 2
+    result = leetcode_35_insert_position.Solution().searchInsert(nums, target)
+    assert result == 1
