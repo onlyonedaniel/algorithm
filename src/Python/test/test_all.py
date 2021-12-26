@@ -1,15 +1,19 @@
 # import sys
-
 from ..algorithm import (
     leetcode_35_insert_position,
     leetcode_70_climbStairs,
+    leetcode_167_towsum,
     leetcode_189_rotate,
     leetcode_278_find_first_bad_version,
     leetcode_283_move_zeros,
+    leetcode_344_reverseString,
     leetcode_509_fibi,
+    leetcode_557_reverseWords,
     leetcode_704_bineray_search,
+    leetcode_876_middleNode,
     leetcode_977_sortedSquares,
     leetcode_1137_tribonacci,
+    utils,
 )
 
 
@@ -67,3 +71,31 @@ def test_sorted_Squares():
     nums = [-3, -1, 0, 1, 2]
     result = leetcode_977_sortedSquares.Solution().sortedSquares(nums)
     assert result == [0, 1, 1, 4, 9]
+
+
+def test_twosum():
+    nums = [1, 2, 3, 4]
+    result = leetcode_167_towsum.Solution().twoSum(nums, 6)
+    assert result == [2, 4]
+
+
+def test_reverseSring():
+    s = ["a", "b", "c", "d", "e", "f", "g"]
+    leetcode_344_reverseString.Solution().reverseString(s)
+    return s == ["g", "f", "e", "d", "c", "b", "a"]
+
+
+def test_reverseWords():
+    s = "Let's take LeetCode contest"
+    result = leetcode_557_reverseWords.Solution().reverseWords(s)
+    assert result == "s'teL ekat edoCteeL tsetnoc"
+
+
+def test_middleNode():
+    head = utils.ListNode(0)
+    temp = head
+    for i in range(1, 10):
+        temp.next = utils.ListNode(i)
+        temp = temp.next
+    node = leetcode_876_middleNode.Solution().middleNode(head)
+    assert node.val == 5
